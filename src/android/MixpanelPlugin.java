@@ -173,6 +173,7 @@ public class MixpanelPlugin extends CordovaPlugin {
     private boolean handleIdentify(JSONArray args, final CallbackContext cbCtx) {
         String uniqueId = args.optString(0, "");
         mixpanel.identify(uniqueId);
+        mixpanel.getPeople().identify(uniqueId);
         cbCtx.success();
         return true;
     }
@@ -228,7 +229,7 @@ public class MixpanelPlugin extends CordovaPlugin {
         cbCtx.success();
         return true;
     }
-    
+
     private boolean stopTimeEvent(JSONArray args, final CallbackContext cbCtx) {
         String event = args.optString(0, "");
         mixpanel.track(event);

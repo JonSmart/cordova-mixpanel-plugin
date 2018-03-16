@@ -1,6 +1,9 @@
 Changelog
 =========
 
+### 2.1.2 2018-03-16
+- add people.identify to Android MixpanelPlugin.handleIdentify
+
 ### 2.1.1 2016-05-17
 - add TimeEvent methods.
 
